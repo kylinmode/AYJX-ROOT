@@ -96,6 +96,13 @@ bundled_install() {
     return 1
   fi
 
+  case "$_id" in
+    oh_my_keymint)
+      ui_print "! 免解锁 Root 专用版不含 OMK，跳过：$_id（$_base）"
+      _bundled_skip=$((_bundled_skip + 1))
+      return 1 ;;
+  esac
+
   if [ "$BOOTMODE" = "false" ]; then
     _root="$NVBASE/modules"
   else
