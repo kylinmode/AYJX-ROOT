@@ -33,24 +33,6 @@
 
 ---
 
-## 内置模块（随包自动安装）
-
-安装脚本按文件名顺序逐个解压并执行各模块自己的 `customize.sh`，每个之间等待 3 秒，失败自动跳过不影响后续。
-
-| # | 模块 | 版本 | 作用 | 原作者 |
-| --- | --- | --- | --- | --- |
-| 1 | Zygisk Next | 1.5.3 (880) | 独立 Zygisk 实现，所有 Zygisk 模块的运行基础 | LSPosed Developers |
-| 2 | Tenc 游戏优化助手 | 20260616 | 监听游戏进程，自动清理 `Ano_tmp` 缓存日志、CPU 伪装、设备标记、强停指定应用；兼容 0–999 全部游戏分身 | 阿灵 |
-| 3 | HMA‑OSS Zygisk | oss‑175 | 应用列表隐藏（Hide My Applist）内核侧支持 | HMA‑OSS |
-| 4 | fgetpriority | v0.0.4 | 内核模块，隐藏部分 syscall 返回结果 | xx / frknkrc44 |
-| 5 | Oh My Keymint | 1.4.6 (268) | 自定义 keystore 实现，Android Keystore 伪装 | James Clef / ITxiao6666 |
-| 6 | PathMask 路径遮罩 | 2.8.3 | LKM 路径遮罩，黑名单 + 持久化配置 + 中英双语 WebUI，KO 适配 5.10–6.18 | Andrea‑lyz（阿灵整合版） |
-| 7 | Play Integrity Fix [INJECT] | v4.8‑inject‑s | Android 8–17 的 Play Integrity 修复 | chiteroman / KOWX712 |
-
-> 以上模块版权归各自作者所有，本仓库仅作整合分发，未修改其功能代码。
-
----
-
 ## 环境要求
 
 - **Root 方案**：KernelSU 或 KSU‑Next（安装脚本按 KSU 的 `ui_print` / `set_perm` / `modules_update` 约定编写）
